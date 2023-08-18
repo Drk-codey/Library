@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC family=Poppins&family=Roboto&display=swap');
+
+:root {
+  --primary-color: #3f51b5;
+  --secondary-color: #28a7469d;
+  --accent-color: #FFC107;
+  --bg-color: #F8F9FA;
+  --text-color: #1f3e59;
+  --neutral-color: #e0e0e0bb;
+  
+  --white: #fffbfb;
+  --grey: #f0eef1;
+  --black: #050505;
+  --red: #ff7070;
+  --light-green: #9fff9c;
+  --light-red: #ff9c9c;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--neutral-color);
+  padding: 14px 15px;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ___Header Styling___ */
+header {
+  background-color: var(--secondary-color);
+  box-shadow: 1px 6px 7px 1px var(--neutral-color);
+  /* border: 1px solid; */
+}
+
+.container {
+  width: 100%;
+  max-width: 1430px;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid; */
+}
+
+#logo {
+  font-family: 'Marcellus SC', serif;
+  font-weight: 900;
+  font-size: 50px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#logo img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.loginBtn {
+  background-color: var(--primary-color);
+  color: #F8F9FA;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.loginBtn:hover {
+  border: 2px solid;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1430px;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.addBookBtn {
+  width: unset;
+  display: block;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #000000;
+  margin: 10px auto 30px;
+  padding: 12px 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.addBookBtn:hover{
+  background-color: var(--neutral-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  color: var(--primary-color);
+}
+
+.addBookBtn:active {
+  transform: scale(0.95);
+}
+
+/* __The Modal Styling__ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  position: relative;
+  margin: 31% auto;
+  padding: 20px;
+  width: 310px;
+  height: 360px;
+  border-radius: 15px;
+}
+
+.submitBtn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Modal Styling End */
+
+.add-book-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-book-form h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.input {
+  width: 95%;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+}
+
+.bookGrids {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
+  line-height: 1.2;
+}
+
+.book-card p {
+  font-size: 24px;
+  color: #000000;
+  align-self: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-isRead {
+  background-color: var(--light-green);
+}
+
+.btn-notRead {
+  background-color: var(--light-red);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+}
+
+.fa-github {
+  font-size: 24px;
+  color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* __Responsive Media Queries */
+
+/* Tablet & Ipads */
+@media only screen and (max-width: 768px) {
+  #logo {
+    font-size: 39px;
+  }
+  
+  #logo img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px;
+  }
+
+  #logo {
+    font-size: 32px;
+  }
+  
+  #logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .loginBtn {
+    padding: 10px 15px;
+  }
+}
