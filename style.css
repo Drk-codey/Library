@@ -176,6 +176,14 @@ header {
   border: 1px solid var(--primary-color);
 }
 
+.input:invalid {
+  border: 1px solid red;
+}
+
+.input:valid {
+  border: 1px solid green;
+}
+
 .bookGrids {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

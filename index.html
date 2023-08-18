@@ -38,14 +38,36 @@
       <div class="modal-content">
         <form class="add-book-form">
           <h3>Add new book</h3>
-          <input type="text" name="" id="title" class="input" placeholder="Title" required>
-          <input type="text" name="" id="author" class="input" placeholder="Author" required>
-          <input type="number" name="" id="pages" class="input" placeholder="Pages">
+          <input 
+            type="text" 
+            name="title" 
+            id="title" 
+            class="input" 
+            placeholder="Title"
+            required 
+          />
+          <input 
+            type="text" 
+            name="author" 
+            id="author" 
+            class="input" 
+            placeholder="Author" 
+            required
+          />
+          <input 
+            type="number" 
+            name="pages" 
+            id="pages" 
+            class="input" 
+            placeholder="Pages" 
+            required
+            min="2"
+          />
           <div class="is-read">
             <label for="isRead">Have you read it?</label>
             <input type="checkbox" name="checkbox" id="isRead">
           </div>
-          <button class="submitBtn btn" onclick="showInTheLibrary()">Submit</button>
+          <button class="submitBtn btn" onclick="checkValidation()">Submit</button>
         </form>
 
       </div>

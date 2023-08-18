@@ -68,6 +68,8 @@ function showInTheLibrary() {
   BookGrids.innerHTML = "";
 
   getInputValue();
+  // checkValidation();
+  
   // Iterate over the myLibrary Array
   for (let i = 0; i < myLibrary.length; i++) {
     const book = myLibrary[i];
@@ -141,5 +143,18 @@ function toggleRead(book, readBtn) {
     readBtn.textContent = "Not read";
     readBtn.classList.add("btn-notRead");
     readBtn.classList.remove("btn-isRead");
+  }
+}
+
+function checkValidation() {
+  var title = document.getElementById("title").value;
+  var author = document.getElementById("author").value;
+  var pages = document.getElementById("pages").value;
+
+  if (title === "" || author === "" || pages === "") {
+      return false;
+  } else {
+    showInTheLibrary();
+    return true;
   }
 }
